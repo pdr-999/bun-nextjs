@@ -17,8 +17,6 @@
 # COPY --from=builder /build/public ./public
 # COPY --from=builder /build/next.config.js ./next.config.js
 
-# RUN ls
-
 # CMD [ "bun", "start" ]
 
 FROM oven/bun:1.0 AS all
