@@ -1,7 +1,15 @@
 version: "3.0"
 services:
-  app:
+  app-bun:
     container_name: bun-nextjs
     build: .
     ports:
       - "3000:3000"
+
+  app-node:
+    container_name: node-nextjs
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    ports:
+      - "3001:3000"
